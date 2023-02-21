@@ -30,7 +30,7 @@ Each week, we will release an assignment that is designed to give you a chance t
 
 | Course Component                      | Grade Percentage  |
 | :-------------                        | :-------------    |
-| Assignments (Total: Best of 7 of 9)   | 70%               |
+| Assignments (Total: Best 7 of 9)      | 70%               |
 | Final Exam                            | 20%               |
 | Attendance/Participation              | 10%               |
 
