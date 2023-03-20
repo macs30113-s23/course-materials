@@ -1,6 +1,7 @@
 [canvas_url]: https://canvas.uchicago.edu/courses/48416
 [jon_oh]: https://calendar.app.google/yto22DQqDT1KxLDT8
 [shiyang_oh]: https://appoint.ly/s/shiyanglai/30113_ta
+[allison_oh]: https://appoint.ly/s/atowey/OH
 
 # Principles of Computing 3: Big Data and High Performance Computing for Social Scientists
 ### Spring 2023 - MACS 30113
@@ -10,7 +11,7 @@
 | Jon Clindaniel               | Shiyang Lai        | Allison Towey | Location: 1155 E. 60th Street, Rm. 295   |
 | 1155 E. 60th Street, Rm. 215 | TBD                | TBD | Monday/Wednesday       |
 | jclindaniel@uchicago.edu     | shiyanglai@uchicago.edu | atowey@uchicago.edu | 3:00-4:20 PM (CT) |
-| **Office Hours:** [Schedule an Appointment][jon_oh]<br/><br/> Drop-In (No appointment needed): Friday 1:00-3:00pm (starting April 7th) | **Office Hours:** [Schedule an Appointment][shiyang_oh]<br/><br/> Drop-In (Appointment needed): Monday 10:00am-12:00pm (starting March 27th) | TBD | [Canvas Course Site][canvas_url] |
+| **Office Hours:** [Schedule an Appointment][jon_oh]<br/><br/> Drop-In (No appointment needed): Friday 1:00-3:00pm (starting April 7th) | **Office Hours:** [Schedule an Appointment][shiyang_oh]<br/><br/> Drop-In (Appointment needed): Monday 10:00am-12:00pm (starting March 27th) | **Office Hours:** [Schedule an Appointment][allison_oh]<br/><br/> Appointment needed: Wednesday 12:30pm-2:30pm | [Canvas Course Site][canvas_url] |
 
 ## Course Description
 Computational social scientists increasingly need to grapple with data that is too big and code that is too resource intensive to run on a local machine. Using Python, students in this course will learn how to effectively scale their computational methods beyond their local machines -- optimizing and parallelizing their code across clusters of CPUs and GPUs, both on-premises and in the cloud. The focus of the course will be on social scientific applications, such as: accelerating social simulations by several orders of magnitude, processing large amounts of social media data in real-time, and training machine learning models on economic datasets that are too large for an average laptop to handle.
