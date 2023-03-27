@@ -9,7 +9,7 @@
 | Instructor Information       | TA Information     | TA Information | Course Information     |
 | :-------------               | :-------------     | :------------- | :------------          |
 | Jon Clindaniel               | Shiyang Lai        | Allison Towey | Location: 1155 E. 60th Street, Rm. 295   |
-| 1155 E. 60th Street, Rm. 215 | TBD                | TBD | Monday/Wednesday       |
+| 1155 E. 60th Street, Rm. 215 | TBD                | 1155 E. 60th Street, Rm. 222 | Monday/Wednesday       |
 | jclindaniel@uchicago.edu     | shiyanglai@uchicago.edu | atowey@uchicago.edu | 3:00-4:20 PM (CT) |
 | **Office Hours:** [Schedule an Appointment][jon_oh]<br/><br/> Drop-In (No appointment needed): Friday 1:00-3:00pm (starting April 7th) | **Office Hours:** [Schedule an Appointment][shiyang_oh]<br/><br/> Drop-In (Appointment needed): Tuesday 9:20am-11:20am (starting March 28th) | **Office Hours:** [Schedule an Appointment][allison_oh]<br/><br/> Appointment needed: Wednesday 12:30pm-2:30pm | [Canvas Course Site][canvas_url] |
 
