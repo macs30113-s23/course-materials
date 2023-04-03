@@ -41,6 +41,7 @@ nano mpi.sbatch
 ```
 module load python/anaconda-2019.03
 module load intelmpi/2018.2.199+intel-18.0
+module load cuda/11.0
 ```
 
 ### Install additional Python packages to local user directory from login node
@@ -48,6 +49,13 @@ To install packages that are not already included in a module (such as installin
 
 ```
 pip install --user mpi4py
+```
+
+To install relevant packages for GPU processing, you can run the following commands (if your session hangs after installing a package, you can generally type `ctrl-c` to stop the stalled process and continue working without further problems).
+
+```
+pip install --user cupy-cuda110
+python -m cupyx.tools.install_library --cuda 11.0 --library cutensor
 ```
 
 # Running jobs
