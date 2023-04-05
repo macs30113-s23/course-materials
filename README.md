@@ -9,9 +9,9 @@
 | Instructor Information       | TA Information     | TA Information | Course Information     |
 | :-------------               | :-------------     | :------------- | :------------          |
 | Jon Clindaniel               | Shiyang Lai        | Allison Towey | Location: 1155 E. 60th Street, Rm. 295   |
-| 1155 E. 60th Street, Rm. 215 | TBD                | 1155 E. 60th Street, Rm. 222 | Monday/Wednesday       |
+| 1155 E. 60th Street, Rm. 215 | 1155 E. 60th Street, Rm. 222 | 1155 E. 60th Street, Rm. 222 | Monday/Wednesday       |
 | jclindaniel@uchicago.edu     | shiyanglai@uchicago.edu | atowey@uchicago.edu | 3:00-4:20 PM (CT) |
-| **Office Hours:** [Schedule an Appointment][jon_oh]<br/><br/> Drop-In (No appointment needed): Friday 1:00-3:00pm (starting April 7th) | **Office Hours:** [Schedule an Appointment][shiyang_oh]<br/><br/> Drop-In (Appointment needed): Tuesday 9:20am-11:20am (starting March 28th) | **Office Hours:** [Schedule an Appointment][allison_oh]<br/><br/> Appointment needed: Wednesday 12:30pm-2:30pm | [Canvas Course Site][canvas_url] |
+| **Office Hours:** [Schedule an Appointment][jon_oh]<br/><br/> Drop-In (No appointment needed): Friday 1:00-3:00pm | **Office Hours:** [Schedule an Appointment][shiyang_oh]<br/><br/> Appointment needed: Tuesday 9:20am-11:20am | **Office Hours:** [Schedule an Appointment][allison_oh]<br/><br/> Appointment needed: Wednesday 12:30pm-2:30pm | [Canvas Course Site][canvas_url] |
 
 ## Course Description
 Computational social scientists increasingly need to grapple with data that is too big and code that is too resource intensive to run on a local machine. Using Python, students in this course will learn how to effectively scale their computational methods beyond their local machines -- optimizing and parallelizing their code across clusters of CPUs and GPUs, both on-premises and in the cloud. The focus of the course will be on social scientific applications, such as: accelerating social simulations by several orders of magnitude, processing large amounts of social media data in real-time, and training machine learning models on economic datasets that are too large for an average laptop to handle.
