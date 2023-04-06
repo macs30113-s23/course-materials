@@ -51,11 +51,10 @@ To install packages that are not already included in a module (such as installin
 pip install --user mpi4py
 ```
 
-To install relevant packages for GPU processing, you can run the following commands (if your session hangs after installing a package, you can generally type `ctrl-c` to stop the stalled process and continue working without further problems).
+To install relevant packages for GPU processing, you can run the following commands after loading the Python and CUDA modules listed above (if your session hangs after installing a package, you can generally type `ctrl-c` to stop the stalled process and continue working without further problems).
 
 ```
 pip install --user cupy-cuda110
-python -m cupyx.tools.install_library --cuda 11.0 --library cutensor
 ```
 
 # Running jobs
