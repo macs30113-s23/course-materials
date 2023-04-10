@@ -108,7 +108,7 @@ This course is open to all students who meet the academic requirements for parti
 | | 5/10/2023 | Expanding the Spark Universe: SNA and NLP at Scale | Skim through the [GraphFrames Documentation for Python](https://docs.databricks.com/spark/latest/graph-analysis/graphframes/user-guide-python.html) and the [Spark NLP Documentation](https://nlp.johnsnowlabs.com/) | Due: Assignment 7 (11:59 PM) |
 | Week 9: Presenting Data and Insights from Large-Scale Data Pipelines | 5/15/2023 | Considerations for Visualizing Large Data | ["What is Apache Zeppelin?"](https://zeppelin.apache.org/docs/0.7.3/index.html), ["Introduction to DataShader"](https://datashader.org/index.html) | |
 || 5/17/2023 | Building and Deploying (Scalable) Public APIs and Web Applications with Flask and AWS Elastic Beanstalk | Read ["What is AWS Elastic Beanstalk?"](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html) and skim through the [Flask "Forward"](https://web.archive.org/web/20211106135422/https://flask-doc.readthedocs.io/en/latest/foreword.html) as well as the [current documentation](https://flask.palletsprojects.com/) | Due: Assignment 8 (11:59 PM) |
-| Week 10: Finals Week  |   | Final Exam Date TBD |   | |
+| Week 10: Finals Week  | 5/25/2023 | Final Exam (3:00-5:00pm) | | |
 || 5/26/2023 | | | Due: Assignment 9 (11:59 PM) |
 
 
