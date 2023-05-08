@@ -5,7 +5,7 @@ from pyspark.sql.functions import *
 spark = SparkSession.builder.getOrCreate()
 
 # Read data
-data = spark.read.csv('/project2/macs30123/AWS_book_reviews/*.csv',
+data = spark.read.csv('/project2/macs30113/AWS_book_reviews/*.csv',
                       header='true',
                       inferSchema='true')
 
