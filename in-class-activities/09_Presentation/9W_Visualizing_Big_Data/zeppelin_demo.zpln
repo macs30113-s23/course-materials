@@ -1,0 +1,573 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%spark.conf\nspark.pyspark.python python3\nspark.pyspark.virtualenv.enabled true\nspark.pyspark.virtualenv.type native\nspark.pyspark.virtualenv.bin.path /usr/bin/virtualenv",
+      "user": "anonymous",
+      "dateUpdated": "2023-05-16T01:15:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "text",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/text",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1684199329423_1689402430",
+      "id": "paragraph_1683907136751_-1224732589",
+      "dateCreated": "2023-05-16T01:08:49+0000",
+      "dateStarted": "2023-05-16T01:09:05+0000",
+      "dateFinished": "2023-05-16T01:09:05+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:3753"
+    },
+    {
+      "text": "%spark.pyspark\n\ndf = spark.read.parquet('s3://nyc-tlc/trip data/yellow_tripdata_2019*.parquet')\n\ndf.createOrReplaceTempView(\"taxi\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-05-16T01:15:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "scatterChart",
+              "height": 652,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "scatterChart": {
+                  "group": {
+                    "name": "PULocationID",
+                    "index": 7,
+                    "aggr": "sum"
+                  },
+                  "xAxis": {
+                    "name": "trip_distance",
+                    "index": 4,
+                    "aggr": "sum"
+                  },
+                  "yAxis": {
+                    "name": "tip_amount",
+                    "index": 13,
+                    "aggr": "sum"
+                  },
+                  "size": {
+                    "name": "tip_amount",
+                    "index": 13,
+                    "aggr": "sum"
+                  }
+                }
+              },
+              "keys": [
+                {
+                  "name": "RatecodeID",
+                  "index": 5,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "airport_fee",
+                  "index": 18,
+                  "aggr": "avg"
+                },
+                {
+                  "name": "tolls_amount",
+                  "index": 14,
+                  "aggr": "avg"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-34-49.ec2.internal:4040/jobs/job?id=0",
+              "$$hashKey": "object:4622"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1684199329424_899690156",
+      "id": "paragraph_1683910000870_-561502384",
+      "dateCreated": "2023-05-16T01:08:49+0000",
+      "dateStarted": "2023-05-16T01:09:11+0000",
+      "dateFinished": "2023-05-16T01:09:49+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3754"
+    },
+    {
+      "text": "%spark.sql\nSELECT passenger_count, AVG(trip_distance) as avg_distance\nFROM taxi\nWHERE passenger_count > 3\nGROUP BY passenger_count\nORDER BY passenger_count",
+      "user": "anonymous",
+      "dateUpdated": "2023-05-16T01:15:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 327.688,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "passenger_count0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "avg_distance1",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "passenger_count": "string",
+                      "avg_distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "pieChart": {},
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "style": "stack"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "forceY": false,
+                  "isDateFormat": false,
+                  "lineWithFocus": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "passenger_count",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "avg_distance",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "passenger_count\tavg_distance\n4.0\t3.1565478227049333\n5.0\t3.025776405356713\n6.0\t3.023784768827353\n7.0\t3.2531250000000003\n8.0\t5.36389891696751\n9.0\t5.2392\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-34-49.ec2.internal:4040/jobs/job?id=1",
+              "$$hashKey": "object:4627"
+            },
+            {
+              "jobUrl": "http://ip-172-31-34-49.ec2.internal:4040/jobs/job?id=2",
+              "$$hashKey": "object:4628"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1684199329424_-2071928036",
+      "id": "paragraph_1683911226884_1156288147",
+      "dateCreated": "2023-05-16T01:08:49+0000",
+      "dateStarted": "2023-05-16T01:11:27+0000",
+      "dateFinished": "2023-05-16T01:11:43+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3755"
+    },
+    {
+      "text": "%spark.pyspark\n\nimport pyspark.sql.functions as F\n\ndf2 = df.filter(F.col('passenger_count') > 3) \\\n        .groupBy('passenger_count') \\\n        .agg(F.avg(F.col('trip_distance')) \\\n              .alias('avg_distance')) \\\n        .orderBy(F.col('passenger_count'))\n\nz.show(df2) # use Zeppelin context's 'show' method",
+      "user": "anonymous",
+      "dateUpdated": "2023-05-16T01:15:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "editorHide": false,
+        "title": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 267.688,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "passenger_count0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "avg_distance1",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "passenger_count": "string",
+                      "avg_distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "pieChart": {},
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "forceY": false,
+                  "isDateFormat": false,
+                  "lineWithFocus": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "passenger_count",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "avg_distance",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "passenger_count\tavg_distance\n4.0\t3.1565478227049333\n5.0\t3.025776405356713\n6.0\t3.0237847688273525\n7.0\t3.2531250000000003\n8.0\t5.363898916967509\n9.0\t5.2392\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1684199329425_-683973858",
+      "id": "paragraph_1683911692915_626659806",
+      "dateCreated": "2023-05-16T01:08:49+0000",
+      "status": "READY",
+      "$$hashKey": "object:3756"
+    },
+    {
+      "text": "%spark.sql\n\nSELECT tip_amount, trip_distance\nFROM taxi",
+      "user": "anonymous",
+      "dateUpdated": "2023-05-16T01:15:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "scatterChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "tip_amount": "string",
+                      "trip_distance": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "tip_amount\ttrip_distance\n0.0\t0.0\n0.7\t3.7\n10.1\t14.1\n0.0\t9.6\n3.0\t0.8\n0.0\t1.2\n0.0\t0.6\n0.0\t5.65\n2.45\t1.16\n1.0\t0.71\n2.86\t2.63\n0.0\t5.0\n14.79\t14.04\n2.55\t2.0\n2.0\t2.11\n0.0\t6.8\n0.0\t5.97\n1.5\t3.4\n11.06\t16.89\n3.5\t5.4\n6.75\t10.6\n2.45\t1.8\n1.95\t1.0\n0.0\t6.1\n4.36\t4.49\n15.26\t18.66\n2.36\t1.67\n2.67\t3.35\n2.26\t1.62\n0.0\t0.1\n3.0\t4.0\n1.5\t0.5\n1.0\t2.5\n0.0\t1.5\n2.15\t1.5\n9.3\t6.4\n6.65\t10.8\n0.0\t0.5\n4.7\t8.7\n1.86\t1.1\n5.0\t8.7\n0.0\t5.8\n2.0\t0.82\n2.16\t0.98\n3.36\t3.68\n12.2\t19.6\n6.05\t9.9\n2.66\t2.5\n3.08\t1.5\n4.05\t3.9\n5.45\t4.7\n4.25\t5.4\n3.32\t2.21\n5.94\t4.43\n2.26\t1.95\n0.0\t2.62\n1.2\t1.4\n1.95\t0.56\n0.0\t2.57\n0.52\t1.48\n2.3\t1.2\n1.5\t1.1\n0.47\t2.4\n3.95\t3.9\n2.34\t0.67\n2.0\t6.61\n3.66\t2.99\n5.0\t8.5\n2.25\t1.7\n4.0\t4.9\n0.0\t0.5\n2.0\t2.6\n9.4\t10.1\n0.0\t0.02\n0.0\t0.02\n4.05\t4.7\n3.15\t2.8\n0.0\t0.6\n0.98\t1.4\n5.96\t5.18\n10.0\t19.47\n5.76\t4.64\n0.0\t0.89\n2.06\t1.88\n0.0\t3.7\n2.86\t2.07\n1.5\t1.28\n0.0\t4.44\n4.76\t7.29\n2.34\t0.39\n2.0\t7.65\n2.06\t0.99\n12.2\t18.3\n0.0\t2.8\n0.0\t0.32\n3.66\t3.84\n0.0\t17.8\n8.26\t14.84\n0.0\t2.2\n0.0\t2.0\n6.85\t10.1\n2.0\t1.1\n3.36\t3.5\n3.3\t2.4\n0.0\t0.8\n1.0\t1.34\n0.0\t2.3\n0.0\t7.35\n3.96\t4.45\n1.56\t0.61\n7.5\t19.0\n0.73\t0.5\n2.25\t1.9\n3.05\t2.6\n1.55\t0.6\n0.0\t0.49\n0.0\t1.5\n5.0\t17.6\n3.95\t4.5\n2.05\t0.8\n0.0\t1.8\n3.55\t3.1\n2.0\t4.1\n5.35\t5.4\n11.06\t17.3\n2.45\t1.16\n3.36\t3.21\n4.5\t7.7\n2.0\t1.8\n0.0\t0.5\n0.0\t4.1\n3.25\t1.9\n3.0\t6.1\n2.35\t1.9\n1.0\t1.59\n2.06\t1.06\n2.46\t1.78\n1.66\t0.89\n0.0\t5.29\n0.0\t0.0\n1.0\t1.1\n2.55\t2.2\n2.25\t1.5\n0.0\t3.0\n1.0\t1.4\n2.45\t0.7\n3.0\t1.5\n1.2\t3.2\n4.06\t6.24\n1.0\t0.53\n4.45\t3.49\n1.84\t2.04\n14.64\t14.0\n0.0\t4.9\n2.5\t4.4\n0.0\t1.21\n0.0\t1.14\n0.0\t10.3\n2.95\t2.0\n3.08\t2.02\n1.0\t1.25\n8.64\t6.95\n0.0\t5.8\n2.45\t0.5\n2.85\t2.5\n1.95\t0.8\n0.0\t1.0\n15.25\t18.7\n1.03\t1.49\n3.7\t2.78\n0.0\t19.4\n0.0\t0.9\n0.01\t8.6\n2.0\t3.4\n5.0\t1.8\n2.06\t1.07\n0.0\t2.82\n3.05\t1.3\n12.21\t18.53\n0.7\t0.34\n0.0\t0.36\n2.0\t0.8\n5.85\t7.0\n5.25\t5.6\n8.65\t13.9\n3.5\t1.3\n2.75\t0.6\n0.0\t0.9\n0.0\t0.9\n0.0\t4.09\n0.0\t7.05\n0.0\t18.4\n0.0\t1.0\n6.15\t6.7\n3.0\t2.4\n3.7\t5.1\n2.05\t1.2\n0.0\t3.4\n2.07\t2.5\n1.06\t0.58\n2.46\t2.63\n2.06\t1.36\n1.56\t1.08\n3.0\t2.65\n1.0\t0.84\n0.0\t0.89\n0.0\t0.84\n4.16\t3.17\n9.35\t17.0\n10.0\t16.4\n2.16\t1.2\n3.56\t3.42\n4.0\t5.2\n1.46\t0.45\n2.36\t1.8\n3.16\t3.28\n0.0\t17.98\n2.16\t1.38\n2.18\t3.86\n0.0\t1.79\n10.65\t18.6\n11.7\t19.5\n0.03\t2.5\n0.0\t3.6\n2.0\t6.5\n1.0\t1.2\n1.0\t0.7\n2.36\t1.0\n3.55\t3.6\n1.15\t0.8\n0.0\t0.8\n0.0\t3.67\n6.8\t7.5\n0.0\t8.7\n4.85\t3.8\n0.0\t1.9\n5.81\t7.69\n9.26\t9.87\n4.16\t4.95\n0.0\t3.15\n1.06\t0.41\n1.75\t0.9\n0.0\t0.6\n0.0\t2.1\n3.0\t6.2\n8.39\t7.87\n2.0\t4.5\n7.54\t6.8\n1.0\t2.0\n2.0\t2.68\n0.0\t1.04\n0.0\t4.68\n1.0\t1.2\n3.76\t3.67\n12.25\t0.0\n10.76\t19.32\n4.86\t4.89\n2.0\t2.9\n2.05\t1.1\n1.85\t0.8\n3.55\t3.3\n2.5\t3.8\n0.0\t3.1\n10.0\t19.86\n2.16\t1.77\n3.7\t5.49\n0.0\t0.41\n0.0\t0.41\n1.95\t1.4\n4.45\t5.6\n0.0\t2.3\n1.0\t1.3\n0.0\t2.2\n1.18\t1.2\n1.5\t4.6\n4.0\t1.46\n0.0\t2.68\n2.06\t1.17\n1.48\t1.3\n1.86\t0.93\n1.4\t1.19\n0.0\t1.11\n1.5\t1.4\n2.0\t6.5\n4.74\t2.84\n3.36\t3.53\n0.0\t0.9\n5.0\t3.3\n2.0\t0.1\n0.0\t0.8\n2.0\t1.12\n1.88\t1.48\n3.56\t2.95\n1.0\t1.11\n9.0\t13.09\n3.86\t4.66\n7.7\t9.0\n0.0\t1.02\n2.36\t1.53\n2.55\t2.1\n0.0\t0.83\n0.0\t2.92\n2.86\t2.05\n1.96\t0.97\n5.58\t5.37\n0.0\t2.9\n11.4\t5.7\n2.0\t2.4\n0.0\t1.08\n2.45\t1.6\n5.0\t4.3\n2.45\t1.1\n0.0\t4.02\n8.0\t18.0\n2.75\t2.3\n0.0\t0.0\n3.0\t4.0\n0.0\t21.5\n1.62\t0.79\n0.0\t5.84\n12.21\t18.36\n1.47\t0.9\n3.16\t2.6\n1.18\t1.5\n0.0\t1.2\n3.85\t4.6\n0.0\t2.66\n3.95\t3.42\n2.56\t2.26\n0.0\t1.2\n0.0\t1.5\n1.95\t1.1\n3.45\t3.8\n2.95\t2.7\n2.34\t0.5\n2.26\t0.83\n2.26\t2.04\n0.0\t8.81\n2.06\t1.69\n2.06\t1.08\n0.0\t1.8\n0.0\t1.6\n1.0\t1.5\n1.0\t0.7\n2.96\t2.55\n1.0\t0.76\n1.76\t0.55\n2.06\t0.99\n4.36\t3.91\n0.0\t0.7\n9.8\t5.8\n6.16\t6.79\n0.0\t2.8\n0.0\t3.6\n0.0\t2.53\n0.0\t0.76\n0.0\t4.14\n1.0\t1.61\n2.0\t1.21\n12.21\t16.94\n0.0\t2.13\n1.95\t1.1\n3.65\t1.6\n2.0\t3.4\n5.05\t6.3\n0.0\t0.0\n0.0\t0.5\n2.85\t2.9\n2.36\t1.6\n0.0\t12.42\n1.96\t0.98\n2.56\t2.09\n0.0\t6.79\n2.76\t3.39\n5.0\t1.19\n2.75\t2.2\n2.25\t1.1\n0.7\t0.9\n4.66\t3.57\n0.0\t1.4\n2.75\t2.1\n1.65\t0.8\n2.55\t2.3\n7.3\t9.7\n0.0\t1.1\n0.0\t2.4\n5.75\t7.1\n0.0\t1.8\n3.86\t4.2\n0.0\t0.36\n0.0\t4.32\n1.66\t0.48\n2.22\t1.98\n1.2\t1.65\n1.84\t2.12\n5.08\t4.67\n4.86\t5.77\n0.0\t4.44\n1.76\t0.88\n5.81\t7.12\n6.75\t5.5\n0.0\t1.57\n2.0\t1.1\n4.55\t3.8\n2.25\t3.26\n3.0\t4.04\n0.0\t0.46\n2.26\t1.56\n3.76\t4.05\n3.5\t1.9\n1.0\t1.1\n4.0\t9.62\n0.0\t0.95\n0.0\t1.56\n1.5\t2.7\n2.0\t3.8\n0.0\t3.5\n0.0\t0.4\n5.75\t7.9\n12.86\t23.66\n3.0\t5.4\n0.0\t3.7\n1.0\t1.2\n0.0\t1.37\n2.66\t1.99\n0.0\t2.25\n0.0\t6.71\n2.04\t0.34\n2.56\t1.95\n1.0\t0.74\n0.0\t4.81\n0.0\t1.44\n1.0\t0.7\n2.5\t1.53\n0.0\t5.72\n0.0\t1.79\n1.5\t1.61\n3.36\t2.65\n1.55\t0.6\n2.15\t1.3\n0.0\t1.52\n0.0\t3.0\n1.0\t1.0\n2.95\t2.1\n1.0\t1.1\n0.0\t9.9\n1.5\t1.8\n5.35\t4.8\n2.0\t1.79\n0.0\t1.76\n0.0\t4.3\n2.6\t3.3\n4.25\t3.9\n1.56\t0.46\n2.26\t1.63\n1.76\t0.63\n10.97\t9.46\n1.45\t0.4\n5.5\t4.8\n0.0\t0.7\n4.96\t6.3\n7.82\t7.23\n0.0\t9.97\n1.0\t1.4\n4.46\t4.96\n2.0\t5.2\n0.0\t6.2\n2.25\t1.3\n0.0\t8.0\n0.0\t0.61\n1.0\t0.31\n0.0\t2.21\n1.82\t1.15\n0.0\t1.3\n3.45\t3.2\n2.35\t1.7\n1.5\t2.06\n3.58\t1.92\n4.24\t7.14\n0.0\t0.84\n1.0\t1.9\n0.0\t2.0\n2.75\t2.8\n1.65\t0.8\n0.0\t3.3\n1.08\t0.73\n0.0\t0.6\n1.52\t5.1\n1.0\t1.7\n8.0\t16.1\n2.36\t1.43\n1.96\t1.14\n9.56\t15.1\n2.25\t1.3\n1.0\t1.9\n3.0\t6.4\n2.05\t1.7\n2.16\t1.0\n1.95\t1.0\n0.9\t1.6\n1.0\t2.0\n2.65\t2.0\n0.0\t3.3\n3.5\t1.9\n2.0\t3.2\n0.0\t1.01\n0.0\t1.21\n0.0\t1.4\n0.0\t0.6\n0.1\t7.8\n2.0\t1.8\n6.0\t16.6\n0.0\t1.32\n1.7\t2.9\n0.0\t2.2\n3.55\t3.4\n2.66\t2.27\n0.0\t0.97\n0.0\t1.3\n3.8\t3.0\n0.0\t0.6\n0.0\t0.83\n4.56\t5.64\n12.2\t18.5\n3.0\t4.92\n6.35\t6.0\n0.0\t7.4\n2.06\t1.03\n1.66\t0.5\n4.86\t4.98\n2.0\t2.2\n0.0\t1.6\n5.15\t6.8\n3.16\t3.56\n1.86\t1.08\n0.0\t11.63\n1.0\t0.85\n0.0\t3.74\n0.0\t0.64\n3.76\t3.4\n2.25\t1.5\n1.5\t1.8\n2.3\t0.9\n0.0\t1.2\n18.32\t15.93\n0.0\t17.39\n1.75\t1.0\n0.0\t0.57\n2.76\t2.83\n0.0\t0.97\n2.5\t17.2\n3.56\t3.87\n6.99\t5.14\n2.75\t1.7\n2.15\t1.3\n3.5\t5.6\n5.05\t6.9\n2.16\t1.28\n0.0\t1.2\n11.05\t17.6\n2.55\t1.0\n4.76\t5.73\n5.36\t6.89\n3.26\t2.92\n2.76\t2.04\n3.76\t3.62\n5.86\t6.69\n3.56\t3.52\n0.0\t2.1\n11.26\t20.39\n1.5\t2.8\n1.76\t0.93\n0.0\t1.35\n2.26\t1.66\n2.82\t1.32\n4.16\t5.19\n1.75\t0.8\n3.0\t4.0\n11.06\t20.11\n2.36\t2.2\n0.0\t16.4\n0.0\t0.69\n0.0\t0.76\n2.45\t1.12\n0.0\t21.6\n1.0\t2.6\n2.0\t2.79\n7.0\t10.12\n2.76\t2.4\n0.0\t1.08\n5.82\t4.5\n2.0\t3.75\n2.56\t1.89\n9.16\t21.9\n1.96\t1.34\n1.2\t2.34\n6.31\t7.41\n0.0\t0.92\n0.0\t0.82\n2.36\t1.78\n2.16\t1.44\n1.96\t0.83\n2.79\t0.73\n6.0\t11.0\n1.0\t0.4\n2.66\t1.8\n1.0\t0.61\n0.0\t9.34\n5.55\t4.7\n11.05\t18.1\n18.66\t19.41\n0.0\t17.6\n0.0\t2.0\n8.3\t7.5\n0.0\t1.5\n0.0\t2.05\n0.0\t0.6\n3.55\t3.0\n3.15\t2.9\n2.39\t2.48\n11.06\t18.99\n1.56\t0.36\n2.76\t2.56\n12.21\t18.36\n3.0\t10.1\n0.0\t1.0\n0.0\t4.0\n4.05\t4.1\n2.26\t1.06\n1.75\t1.73\n2.06\t1.1\n0.0\t1.5\n1.0\t0.6\n2.86\t2.36\n2.76\t2.88\n1.7\t1.55\n2.04\t0.81\n8.04\t7.28\n0.0\t2.33\n7.41\t9.51\n0.0\t2.56\n2.45\t2.2\n1.0\t0.7\n5.0\t18.58\n0.0\t0.7\n1.75\t0.7\n2.0\t4.2\n4.56\t3.72\n0.0\t5.32\n2.45\t1.4\n2.0\t3.2\n1.5\t1.47\n5.58\t6.35\n2.86\t2.1\n1.0\t1.44\n0.0\t0.5\n7.4\t9.4\n0.0\t1.8\n0.15\t1.8\n2.25\t1.5\n0.0\t0.84\n2.06\t1.06\n12.21\t19.02\n0.0\t3.15\n0.0\t2.12\n1.96\t1.13\n2.56\t1.96\n1.2\t3.56\n4.06\t4.43\n3.06\t1.6\n2.86\t2.55\n0.0\t12.93\n11.05\t18.2\n1.0\t0.5\n2.75\t1.1\n6.55\t8.6\n2.0\t1.53\n0.0\t1.0\n2.36\t1.89\n2.06\t1.01\n0.0\t1.2\n1.96\t0.92\n6.16\t7.73\n9.06\t15.46\n0.0\t0.22\n0.0\t3.22\n0.0\t4.56\n6.0\t18.0\n3.45\t2.4\n3.15\t3.1\n2.75\t2.2\n0.0\t4.5\n1.95\t1.0\n3.8\t2.1\n4.26\t4.24\n0.0\t8.29\n2.56\t2.6\n3.55\t3.2\n0.0\t1.64\n1.0\t1.64\n1.96\t0.93\n0.0\t5.82\n0.5\t0.6\n3.99\t2.56\n1.56\t0.71\n2.56\t1.93\n0.0\t3.29\n0.0\t0.35\n5.85\t6.4\n4.06\t3.98\n5.85\t7.8\n8.41\t11.29\n2.65\t2.3\n3.35\t3.9\n3.99\t1.87\n0.0\t1.66\n3.46\t3.08\n3.16\t3.05\n2.55\t1.6\n0.0\t1.9\n2.94\t0.3\n0.0\t9.79\n0.0\t5.26\n0.0\t7.42\n1.0\t1.75\n0.0\t2.3\n2.26\t1.72\n2.56\t1.96\n2.96\t3.1\n5.94\t3.69\n4.2\t6.11\n1.62\t1.16\n4.0\t6.34\n0.0\t0.4\n2.65\t1.8\n0.0\t6.0\n1.62\t1.3\n3.55\t3.6\n2.36\t1.93\n0.0\t0.61\n0.0\t0.91\n0.96\t0.45\n1.86\t1.01\n2.66\t2.07\n3.08\t2.04\n1.88\t3.7\n6.54\t5.02\n2.46\t1.94\n0.0\t5.91\n1.66\t0.55\n4.56\t4.93\n5.26\t4.56\n2.86\t3.84\n1.0\t1.85\n2.45\t1.6\n0.0\t1.3\n2.76\t2.8\n2.15\t1.2\n1.45\t1.2\n0.0\t2.39\n0.0\t21.3\n5.25\t5.0\n1.13\t1.7\n1.65\t0.7\n3.06\t2.77\n4.26\t5.53\n7.7\t7.2\n0.01\t5.2\n0.0\t0.0\n2.46\t2.31\n0.0\t3.02\n0.0\t2.5\n0.0\t0.51\n0.0\t1.19\n5.26\t8.79\n2.5\t0.88\n0.0\t0.73\n0.0\t2.03\n1.0\t1.71\n1.44\t0.38\n0.0\t4.7\n2.35\t1.9\n0.0\t0.8\n1.58\t2.6\n1.2\t1.7\n0.0\t2.16\n8.65\t15.4\n1.0\t1.4\n1.45\t0.3\n0.5\t0.3\n0.7\t0.6\n1.0\t1.08\n3.0\t3.93\n4.36\t5.25\n1.76\t0.94\n2.26\t1.56\n0.0\t5.92\n1.0\t1.69\n3.0\t5.24\n0.0\t1.7\n0.0\t1.6\n5.96\t7.26\n1.0\t1.74\n0.0\t0.83\n2.66\t2.04\n2.55\t1.9\n3.26\t3.1\n2.0\t1.16\n0.0\t2.2\n13.2\t18.93\n0.0\t0.07\n6.55\t10.7\n2.46\t1.84\n1.11\t2.21\n0.0\t0.0\n1.5\t1.0\n3.26\t2.9\n5.75\t6.7\n2.05\t1.2\n2.35\t1.4\n2.55\t1.9\n2.36\t1.53\n2.0\t1.54\n0.0\t1.42\n0.0\t12.31\n3.45\t2.03\n0.0\t3.1\n2.06\t1.22\n7.35\t10.3\n4.96\t5.65\n0.0\t1.13\n0.0\t3.7\n0.0\t0.81\n2.06\t1.16\n2.26\t1.21\n1.0\t1.42\n3.46\t3.44\n0.0\t10.56\n4.36\t4.88\n1.75\t0.8\n4.05\t2.9\n6.45\t5.0\n0.0\t0.84\n1.38\t1.72\n2.36\t1.56\n3.55\t3.3\n1.86\t0.97\n4.26\t4.6\n1.16\t0.9\n0.0\t3.53\n3.02\t0.0\n3.06\t2.53\n0.0\t3.73\n0.0\t0.07\n1.0\t0.83\n0.0\t3.12\n1.66\t0.52\n3.76\t4.02\n0.0\t0.67\n1.08\t1.19\n2.16\t1.35\n6.46\t8.22\n11.06\t20.44\n0.0\t0.44\n0.0\t1.79\n0.0\t0.72\n2.46\t1.8\n4.56\t5.32\n0.01\t1.11\n1.96\t0.87\n0.0\t1.62\n1.56\t0.51\n15.26\t21.25\n0.0\t2.0\n2.36\t1.66\n2.06\t0.95\n5.08\t4.63\n2.26\t1.58\n3.5\t2.65\n0.0\t5.76\n3.0\t3.6\n3.36\t3.58\n1.76\t1.51\n0.0\t0.35\n0.0\t12.1\n1.76\t0.69\n1.65\t0.6\n3.05\t2.4\n1.0\t1.0\n4.65\t7.2\n0.0\t1.5\n5.0\t5.8\n0.0\t2.5\n3.33\t1.75\n0.0\t1.03\n1.66\t0.91\n3.36\t3.24\n2.16\t1.49\n2.0\t3.53\n7.95\t9.91\n2.37\t3.7\n1.0\t1.6\n0.0\t0.7\n1.85\t0.4\n0.0\t0.8\n2.25\t1.6\n2.0\t4.7\n5.75\t9.6\n1.0\t3.1\n0.0\t0.77\n0.0\t10.6\n0.0\t5.74\n0.0\t1.57\n0.0\t0.4\n2.06\t1.22\n2.76\t1.85\n4.96\t5.62\n1.5\t2.99\n1.0\t2.16\n2.0\t2.1\n4.95\t5.1\n0.0\t0.49\n2.06\t1.15\n2.16\t1.51\n6.66\t9.36\n2.35\t1.5\n2.26\t1.56\n3.7\t2.47\n0.0\t4.01\n1.62\t1.5\n5.76\t7.02\n3.35\t4.3\n1.78\t3.61\n0.0\t0.61\n5.06\t5.83\n0.0\t0.67\n1.95\t0.8\n1.5\t1.1\n2.16\t1.42\n0.0\t0.79\n2.55\t2.0\n0.0\t2.8\n2.21\t1.8\n2.86\t2.37\n0.0\t1.65\n3.86\t3.47\n0.78\t1.38\n1.86\t0.9\n0.0\t0.64\n10.14\t7.28\n0.0\t0.69\n1.0\t1.37\n2.2\t0.77\n2.95\t1.5\n0.0\t2.5\n0.0\t0.66\n0.0\t0.88\n1.24\t0.65\n5.66\t6.51\n4.36\t4.7\n2.32\t0.94\n0.0\t1.69\n2.76\t2.32\n3.16\t2.99\n2.66\t1.58\n4.26\t5.17\n0.0\t2.83\n1.0\t2.8\n1.0\t0.56\n3.16\t1.6\n3.58\t2.85\n3.16\t3.48\n0.0\t0.38\n2.56\t1.74\n0.0\t0.0\n2.0\t1.72\n0.0\t8.3\n1.75\t0.7\n0.0\t1.1\n0.0\t0.6\n3.8\t1.6\n2.0\t2.2\n0.0\t0.0\n0.0\t23.7\n2.58\t1.35\n2.36\t1.54\n1.86\t0.86\n3.86\t4.2\n2.16\t1.43\n2.7\t1.34\n1.0\t2.02\n3.56\t4.1\n0.0\t0.43\n2.76\t2.06\n2.16\t1.64\n2.46\t1.78\n2.16\t1.25\n2.16\t1.36\n2.36\t1.84\n1.5\t1.7\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1684199329425_339756492",
+      "id": "paragraph_1683910282358_-1088575383",
+      "dateCreated": "2023-05-16T01:08:49+0000",
+      "status": "READY",
+      "$$hashKey": "object:3757"
+    }
+  ],
+  "name": "zeppelin_demo",
+  "id": "2J2E4U29K",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/zeppelin_demo"
+}
